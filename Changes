@@ -1,3 +1,6 @@
+0.05  ?
+      - Fixed link to freedesktop.org - RT 37320 - GWOLF
+
 0.04  Sun Nov  4 2007
 Hot fix release - POSIX does not export LC_MESSAGES on all platforms
       - Removed POSIX dependency

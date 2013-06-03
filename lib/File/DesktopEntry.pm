@@ -830,7 +830,7 @@ modify it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<http://www.freedesktop.org/wiki/Specifications/desktop-entry-spec>
+L<http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html>
 
 L<File::BaseDir> and L<File::MimeInfo::Applications>
 
