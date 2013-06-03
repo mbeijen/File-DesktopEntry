@@ -1,4 +1,5 @@
 0.05  ?
+      - Added IO::Scalar as dependency - RT 42770 - ANDK
       - Fixed link to freedesktop.org - RT 37320 - GWOLF
 
 0.04  Sun Nov  4 2007

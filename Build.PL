@@ -12,6 +12,7 @@ my $build = Module::Build->new(
 		'File::Spec'	=> 0,
 		'File::Path'	=> 0,
 		'File::BaseDir'	=> '0.03',
+                'IO::Scalar'    => '2.110',
 		($^O eq 'MSWin32' ? (
 			'Win32::Process'   => 0,
 		) : ()),
