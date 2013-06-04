@@ -1,6 +1,6 @@
 0.05  ?
       - Fixed tests on Windows - RT 45669
-      - Added IO::Scalar as dependency - RT 42770 - ANDK
+      - Set perl 5.8.6 as minimum version - RT 42770 - ANDK
       - Fixed link to freedesktop.org - RT 37320 - GWOLF
 
 0.04  Sun Nov  4 2007

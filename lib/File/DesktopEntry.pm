@@ -578,14 +578,10 @@ sub read {
 	unless (ref $file)  {
 		open $fh, "<$file" or croak "Could not open file: $file";
 	}
-	elsif ($] >= 5.008) {
+	else {
 		open $fh, '<', $file or croak "Could not open SCALAR ref !?";
 	}
-	else { # scalar ref needs dependency for perl < 5.008
-		require IO::Scalar;
-		$fh = IO::Scalar->new($file);
-	}
-	binmode $fh, ':utf8' unless $] < 5.008;
+	binmode $fh, ':utf8';
 	$self->read_fh($fh);
 	close $fh;
 }

@@ -8,11 +8,11 @@ my $build = Module::Build->new(
 	dist_author => 'Jaap Karssenberg <pardus@cpan.org>',
 	license => 'perl',
 	requires => {
-		'Carp'		=> 0,
+		'perl'          => '5.8.6', 
+		'Carp'		    => 0,
 		'File::Spec'	=> 0,
 		'File::Path'	=> 0,
 		'File::BaseDir'	=> '0.03',
-                'IO::Scalar'    => '2.110',
 		($^O eq 'MSWin32' ? (
 			'Win32::Process'   => 0,
 		) : ()),
