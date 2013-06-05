@@ -6,7 +6,7 @@ use Carp;
 use File::Spec;
 use File::BaseDir 0.03 qw/data_files data_home/;
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 our $VERBOSE = 0;
 
 if ($^O eq 'MSWin32') {
