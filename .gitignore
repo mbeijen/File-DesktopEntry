@@ -1,0 +1,10 @@
+MYMETA.*
+Build
+_build
+blib
+*~
+*.bak
+!.gitignore
+!.gitkeep
+/File-DesktopEntry-*
+/.build
