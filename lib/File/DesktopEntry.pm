@@ -501,7 +501,7 @@ E.g. C<< $entry->set("Name[nl_NL]" => "Tekst Verwerker") >> will set a Dutch
 translation for the Name key. Using either "Name[C]" or "Name[POSIX]" will
 be equivalent with not giving a language argument.
 
-When setting the the Exec key without specifying a group it will be parsed
+When setting the Exec key without specifying a group it will be parsed
 and quoted correctly as required by the spec. You can use quoted arguments
 to include whitespace in a argument, escaping whitespace does not work.
 To circumvent this quoting explicitly give the group name 'Desktop Entry'.
@@ -525,7 +525,7 @@ sub set {
 		my ($k, $v) = splice(@data, 0, 2);
 		$k =~ s/\[(C|POSIX)\]$//;  # remove default locale
 		my ($word) = ($k =~ /^(.*?)(\[.*?\])?$/);
-			# seperate key and locale
+			# separate key and locale
 		croak "BUG: Key missing: $k" unless length $word;
 		carp "Key contains invalid characters: $k"
 			if $word =~ /[^A-Za-z0-9-]/;
