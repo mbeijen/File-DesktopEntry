@@ -501,7 +501,7 @@ E.g. C<< $entry->set("Name[nl_NL]" => "Tekst Verwerker") >> will set a Dutch
 translation for the Name key. Using either "Name[C]" or "Name[POSIX]" will
 be equivalent with not giving a language argument.
 
-When setting the the Exec key without specifying a group it will be parsed
+When setting the Exec key without specifying a group it will be parsed
 and quoted correctly as required by the spec. You can use quoted arguments
 to include whitespace in a argument, escaping whitespace does not work.
 To circumvent this quoting explicitly give the group name 'Desktop Entry'.
