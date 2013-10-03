@@ -487,9 +487,9 @@ sub _group { # returns index for a group name
 	return undef;
 }
 
-=item C<set(KEY => VALUE, ...)>
+=item C<set(KEY =E<gt> VALUE, ...)>
 
-=item C<set(GROUP, KEY => VALUE, ...)>
+=item C<set(GROUP, KEY =E<gt> VALUE, ...)>
 
 Set values for one or more keys. If GROUP is not given "Desktop Entry" is used.
 All values are treated as strings, backslashes, newlines and tabs are escaped.
