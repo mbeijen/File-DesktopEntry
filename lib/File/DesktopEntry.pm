@@ -465,7 +465,7 @@ sub get {
 	return undef unless defined $i;
 	my $lang = join('|', map quotemeta($_), @lang) || 'C';
 	my %matches = ( $$self{groups}[$i] =~
-		/^(\Q$key\E\[(?:$lang)\]|\Q$key\E)\s*=\s*(.*?)\s*$/gm );
+		/^(\Q$key\E\[(?:$lang)\]|\Q$key\E)[^\S\n]*=[^\S\n]*(.*?)\s*$/gm );
 	return undef unless keys %matches;
 
 	# Find preferred value
