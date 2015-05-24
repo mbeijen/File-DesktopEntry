@@ -1,5 +1,6 @@
 use strict;
-use Test::More tests => 30;
+use warnings;
+use Test::More;
 
 use File::DesktopEntry;
 $File::DesktopEntry::_locale = ''; # reset locale for testing
@@ -176,3 +177,10 @@ else {
 	ok($@, 'parse_Exec dies when multiple args not supported');
 }
 
+$file = File::Spec->catfile(qw/t applications rt65394.desktop/);
+my $entry = File::DesktopEntry->new($file);
+is($entry->get('Name'), 'caja', 'new(FILE) works');
+is($entry->Name, 'caja', 'AUTOLOAD works');
+is($entry->Path, '', 'Path is empty string');
+
+done_testing;
