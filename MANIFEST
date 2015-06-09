@@ -12,3 +12,4 @@ t/04_pod_ok.t
 t/05_pod_cover.t
 t/06_changes.t
 t/applications/foo.desktop
+t/applications/rt65394.desktop

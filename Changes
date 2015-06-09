@@ -1,3 +1,7 @@
+0.10 2015-06-09
+ - Include new test in MANIFEST
+    RT 105112 - SREZIC
+
 0.09 2015-06-09
  - Exclude newlines from whitespace on either side of '='
     RT 65394, fix by sdme.
