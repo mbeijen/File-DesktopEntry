@@ -1,10 +1,9 @@
 MYMETA.*
-Build
-_build
+Makefile
+pm_to_blib
 blib
 *~
 *.bak
 !.gitignore
 !.gitkeep
 /File-DesktopEntry-*
-/.build
