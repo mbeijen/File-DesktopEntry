@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use 5.006001;
+use 5.008_001;
 
 use ExtUtils::MakeMaker;
 
