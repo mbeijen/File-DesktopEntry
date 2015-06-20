@@ -1,5 +1,4 @@
 use strict;
-use Module::Build;
 use File::DesktopEntry;
 
 $| = 1;
