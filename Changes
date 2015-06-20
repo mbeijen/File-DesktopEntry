@@ -1,3 +1,7 @@
+0.12 2015-06-20
+ - Remove spurious Module::Build from test. Reported by gregor herrmann,
+   Debian team, https://bugs.debian.org/789210
+
 0.11 2015-06-11
  - Explicitly state minimum perl version as 5.8 in Makefile.PL.
 

@@ -1,4 +1,6 @@
 use strict;
+use warnings;
+
 use File::DesktopEntry;
 
 $| = 1;
