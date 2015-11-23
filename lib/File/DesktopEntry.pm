@@ -5,8 +5,10 @@ use warnings;
 
 use vars qw/$AUTOLOAD/;
 use Carp;
+use Encode;
 use File::Spec;
 use File::BaseDir 0.03 qw/data_files data_home/;
+use URI::Escape;
 
 our $VERSION = '0.12';
 our $VERBOSE = 0;
@@ -401,7 +403,7 @@ sub _paths {
     # A path like file://host/path is replace by smb://host/path
     # which the app probably can't open
     map {
-        s#^file:(?://localhost/+|/|///+)(?!/)#/#i;
+        $_ = _uri_to_path($_) if s#^file:(?://localhost/+|/|///+)(?!/)#/#i;
         s#^file://(?!/)#smb://#i;
         $_;
     } @_;
@@ -421,8 +423,18 @@ sub _dirs {
 sub _uris {
     # Convert paths to file:// uris
     map {
-        m#^\w+://# ? $_ : 'file://'.File::Spec->rel2abs($_) ;
+        m#^\w+://# ? $_ : 'file://'._path_to_uri(File::Spec->rel2abs($_));
     } @_;
+}
+
+sub _uri_to_path {
+    my $x = Encode::encode('utf8', $_);
+    $x = uri_unescape($x);
+    return Encode::decode('utf8', $x);
+}
+
+sub _path_to_uri {
+    return join '/', map { uri_escape_utf8($_) } split '/', $_;
 }
 
 =item C<get(KEY)>
