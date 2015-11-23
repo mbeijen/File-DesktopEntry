@@ -829,6 +829,7 @@ Maintained by Michiel Beijen E<lt>michielb@cpan.org<gt>
 Copyright (c) 2005, 2007 Jaap G Karssenberg. All rights reserved.
 
 =head1 LICENSE
+
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
