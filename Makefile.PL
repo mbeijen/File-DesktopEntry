@@ -16,9 +16,11 @@ WriteMakefile
   'MIN_PERL_VERSION'   => '5.8.6',
   'BUILD_REQUIRES'     => {
     'Carp'           => 0,
+    'Encode'         => 0,
     'File::Spec'     => 0,
     'File::Path'     => 0,
     'File::BaseDir'  => '0.03',
+    'URI::Escape'    => 0,
     ($^O eq 'MSWin32' ? ('Win32::Process' => 0) : ()),
   },
   'CONFIGURE_REQUIRES' => {

@@ -1,3 +1,7 @@
+0.20 2015-11-23
+ - Fix opening files with special characters
+    RT 93168 - fix provided by Romain Vavassori.
+
 0.12 2015-06-20
  - Remove spurious Module::Build from test. Reported by gregor herrmann,
    Debian team, https://bugs.debian.org/789210
@@ -14,7 +18,7 @@
     RT 65394, fix by sdme.
 
 0.08 2013-10-07
- - Corrected build instructinos.
+ - Corrected build instructions.
 
 0.07 2013-10-03
  - Fixed dependency on Win32 module.
