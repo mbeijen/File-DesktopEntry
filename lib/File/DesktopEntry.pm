@@ -810,10 +810,6 @@ If the icon is given as name and not as path it should be resolved for the C<%i>
 code in the Exec key. We need a separate module for the icon spec to deal with
 this.
 
-Files are read and written using utf8, this is not available on perl versions
-before 5.8. As a result for older perl versions translations in UTF-8 will not
-be translated properly.
-
 According to the spec comments can contain any encoding. However since this
 module read files as utf8, invalid UTF-8 characters in a comment will cause
 an error.
@@ -824,7 +820,8 @@ There is no support for Legacy-Mixed Encoding. Everybody is using utf8 now
 =head1 AUTHOR
 
 Jaap Karssenberg (Pardus) E<lt>pardus@cpan.orgE<gt>
-Maintained by Michiel Beijen E<lt>michielb@cpan.org<gt>
+
+Maintained by Michiel Beijen E<lt>michielb@cpan.orgE<gt>
 
 Copyright (c) 2005, 2007 Jaap G Karssenberg. All rights reserved.
 
