@@ -1,3 +1,6 @@
+0.21 2015-11-25
+ - Documentation changes only.
+
 0.20 2015-11-23
  - Fix opening files with special characters
     RT 93168 - fix provided by Romain Vavassori.
