@@ -1,4 +1,5 @@
 0.22 2015-12-10
+ - Fix issue on Windows with File URIs
  - Correctly state runtime dependencies
 
 0.21 2015-11-25

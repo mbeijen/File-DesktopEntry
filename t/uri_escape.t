@@ -1,7 +1,12 @@
+use strict;
+use warnings;
 use Test::More;
 use File::DesktopEntry;
 
 use utf8;
+
+plan skip_all => "Windows"
+  if $^O eq 'MSWin32';
 
 my $buffer = <<EOF;
 [Desktop Entry]
@@ -23,7 +28,7 @@ is_deeply(\@exec,
 # Test unescaping characters
 $entry->set(Exec => q#/bin/foo %F#);
 
-my @exec = $entry->parse_Exec("file:///home/#=& € €",
+@exec = $entry->parse_Exec("file:///home/#=& € €",
     'file:///home/%23%3D%26%20%E2%82%AC €');
 
 is_deeply(\@exec,

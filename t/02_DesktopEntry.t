@@ -126,12 +126,12 @@ else {
 	$entry->set(Exec => q#fooview %%foo %U#);
 
 	my $exec = $entry->parse_Exec('C:/usr/share', 'http://cpan.org');
-	is($exec, q#fooview %foo file://C:/usr/share http://cpan.org#,
+	is($exec, q#fooview %foo file:///C:/usr/share http://cpan.org#,
 		"parse_Exec works with %U");
 
 	my @exec = $entry->parse_Exec('C:/usr/share', 'http://cpan.org');
 	is_deeply(\@exec,
-		['fooview', '%foo', 'file://C:/usr/share', 'http://cpan.org'],
+		['fooview', '%foo', 'file:///C:/usr/share', 'http://cpan.org'],
 		"parse_Exec works with %U - list context");
 }
 
