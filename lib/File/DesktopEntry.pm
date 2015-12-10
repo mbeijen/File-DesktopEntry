@@ -423,7 +423,7 @@ sub _dirs {
 sub _uris {
     # Convert paths to file:// uris
     map {
-        m#^\w+://# ? $_ : 'file://'._path_to_uri(File::Spec->rel2abs($_));
+        m#^\w+://# ? $_ : 'file://'._path_to_uri($_);
     } @_;
 }
 
@@ -434,7 +434,18 @@ sub _uri_to_path {
 }
 
 sub _path_to_uri {
-    return join '/', map { uri_escape_utf8($_) } split '/', $_;
+    my $path = File::Spec->rel2abs(shift);
+    my ($volume, $directories, $file) = File::Spec->splitpath($path);
+    my $uri = '';
+
+    # actually, on Windows, File URI's look like this:
+    # file:///C:/Program%20Files/MyApp/app.exe
+    # ref: https://blogs.msdn.microsoft.com/ie/2006/12/06/file-uris-in-windows/
+    if ($volume) {
+        $uri .= '/' . $volume;
+    }
+    $uri .= join '/', map { uri_escape_utf8($_) } File::Spec->splitdir($directories . $file);
+    return $uri;
 }
 
 =item C<get(KEY)>
