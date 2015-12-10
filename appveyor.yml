@@ -1,7 +1,10 @@
 version: 1.0.{build}
 
+install:
+ - ppm install File-BaseDir
+
 build_script:
-  - perl -V
+ - perl -V
 
 test_script:
-  - prove -lv
+ - prove -lv
