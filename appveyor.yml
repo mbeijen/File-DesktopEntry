@@ -1,7 +1,8 @@
 version: 1.0.{build}
 
 install:
- - ppm install File::BaseDir
+ - ppm install MinGW
+ - cpan install File::BaseDir
 
 build_script:
  - perl -V
