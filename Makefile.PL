@@ -14,7 +14,7 @@ WriteMakefile
   'VERSION_FROM'       => 'lib/File/DesktopEntry.pm',
   'LICENSE'            => 'perl',
   'MIN_PERL_VERSION'   => '5.8.6',
-  'BUILD_REQUIRES'     => {
+  'PREREQ_PM' => {
     'Carp'           => 0,
     'Encode'         => 0,
     'File::Spec'     => 0,
